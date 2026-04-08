@@ -1,52 +1,77 @@
-# Interactive Wall Calendar
+# 📅 Interactive Wall Calendar
 
-Production-ready Next.js App Router project for an interactive wall calendar with animated date-range selection, hero-synced theming, and localStorage-backed notes.
+A production-ready interactive wall calendar built with Next.js App Router, featuring animated date-range selection, dynamic theming, and persistent notes.
 
-## Tech Stack
+🔗 **Live Demo:** https://wall-calendar-tuf-six.vercel.app/
 
-- Next.js (App Router, TypeScript)
-- Tailwind CSS
-- shadcn/ui-style components
-- date-fns
-- Zustand (state management)
-- localStorage (persistence)
-- Framer Motion (animations)
+---
 
-## Features
+## 🚀 Overview
 
-- Wall-calendar style layout with:
-  - Hero image panel
-  - Month/year header
-  - 7-column calendar grid
-  - Notes panel
-- Date range selection:
-  - Start/end styling
-  - In-between highlight
-  - Hover preview animation
-  - Reverse selection support
-  - Same-day selection support
-  - Reset behavior on repeated click
-- Notes:
-  - Notes per selected date range
-  - Monthly notes
-  - Auto-saved and restored from localStorage
-- UX polish:
-  - Today indicator
-  - Holiday markers (mock data)
-  - Month prev/next + today jump
-  - Page-flip month animation
-  - Click ripple + subtle scale micro-interactions
-  - Keyboard navigation in grid (arrows + Enter/Space)
-  - Optional disable past dates toggle
-- Theming:
-  - Hero image dominant color extraction
-  - Dynamic accent tokens applied across the UI
-  - Dark/light mode toggle
-- Deployment-ready:
-  - Vercel-ready configuration
-  - Custom title + favicon
+This project was built as part of a frontend engineering challenge to transform a static wall calendar design into a fully interactive, responsive, and user-friendly web component.
 
-## Folder Structure
+It focuses on **clean UI design, smooth user interactions, and thoughtful UX details**, while maintaining a scalable component architecture.
+
+---
+
+## ✨ Key Features
+
+### 📆 Wall Calendar Experience
+
+* Hero image panel acting as a visual anchor
+* Monthly calendar grid with clear hierarchy
+* Integrated notes section
+
+### 🎯 Date Range Selection
+
+* Start & end date highlighting
+* Continuous range visualization
+* Hover preview before selection
+* Reverse & same-day selection support
+* Reset behavior on repeated clicks
+
+### 📝 Notes System
+
+* Add notes for selected date ranges
+* Monthly notes support
+* Persistent storage using localStorage
+
+### 🎨 Dynamic Theming
+
+* Extracts dominant colors from hero image
+* Applies theme across UI for consistency
+* Dark / Light mode toggle
+
+### ⚡ UX Enhancements
+
+* Today indicator
+* Holiday markers (mock data)
+* Smooth page-flip month transitions
+* Micro-interactions (click ripple, scaling)
+* Keyboard navigation (arrows + Enter/Space)
+* Optional "disable past dates" toggle
+
+### 📱 Fully Responsive
+
+* Desktop: structured multi-panel layout
+* Mobile: stacked, touch-friendly experience
+
+---
+
+## 🛠 Tech Stack
+
+* **Next.js (App Router + TypeScript)**
+* **Tailwind CSS**
+* **Zustand** – state management
+* **Framer Motion** – animations
+* **date-fns** – date utilities
+* **localStorage** – persistence
+
+---
+
+## 🧩 Architecture
+
+The project follows a modular and reusable component structure:
 
 ```text
 app/
@@ -65,40 +90,70 @@ store/
   useCalendarStore.ts
 ```
 
-## Setup
+* Centralized state using Zustand
+* Separation of UI and logic via `lib/` utilities
+* Component-driven design for scalability
 
-1. Install dependencies:
+---
+
+## ⚙️ Getting Started
+
+### 1. Install dependencies
 
 ```bash
 npm install
 ```
 
-2. Run development server:
+### 2. Run development server
 
 ```bash
 npm run dev
 ```
 
-3. Open:
+### 3. Open in browser
 
-```text
+```
 http://localhost:3000
 ```
 
-## Production
+---
 
-Build and run:
+## 🚀 Production Build
 
 ```bash
 npm run build
 npm run start
 ```
 
-## Deploy on Vercel
+---
 
-1. Push this project to a Git provider (GitHub/GitLab/Bitbucket).
-2. Import the repository in Vercel.
-3. Framework preset should auto-detect as Next.js.
-4. Click Deploy.
+## 🌐 Deployment
 
-No extra env variables are required for this project.
+This project is fully optimized for deployment on Vercel:
+
+1. Push to GitHub / GitLab / Bitbucket
+2. Import into Vercel
+3. Deploy (auto-detects Next.js)
+
+No environment variables required.
+
+---
+
+## 🎯 Highlights
+
+* Focus on **UX polish and interaction design**
+* Handles **edge cases** like reverse selection & same-day selection
+* Clean and scalable **component architecture**
+* Fully **frontend-only** solution as per challenge constraints
+
+---
+
+## 📌 Author
+
+**Arnav Bhardwaj**
+
+---
+
+## 🙌 Acknowledgment
+
+Built as part of a frontend engineering challenge to demonstrate UI engineering, state management, and responsive design skills.
