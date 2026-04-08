@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 38 45% 97%;
+    --foreground: 222 35% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 35% 16%;
+    --muted: 34 32% 94%;
+    --muted-foreground: 217 12% 46%;
+    --border: 34 20% 86%;
+    --hero-accent: #3b82f6;
+    --hero-accent-strong: #1d4ed8;
+    --hero-accent-soft: rgba(59, 130, 246, 0.23);
+    --hero-accent-faint: rgba(59, 130, 246, 0.14);
+    color-scheme: light;
+  }
+
+  .dark {
+    --background: 214 34% 10%;
+    --foreground: 210 18% 95%;
+    --card: 215 35% 13%;
+    --card-foreground: 210 20% 96%;
+    --muted: 216 28% 19%;
+    --muted-foreground: 216 14% 72%;
+    --border: 216 23% 22%;
+    color-scheme: dark;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background-image: radial-gradient(
+        circle at 15% 10%,
+        color-mix(in oklab, var(--hero-accent) 12%, transparent),
+        transparent 35%
+      ),
+      radial-gradient(circle at 85% 90%, rgba(255, 255, 255, 0.22), transparent 45%);
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply rounded-3xl border border-white/35 bg-white/75 shadow-soft backdrop-blur-xl dark:border-white/10 dark:bg-slate-900/75;
+  }
+
+  .calendar-texture {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.28),
+      rgba(255, 255, 255, 0.28) 1px,
+      transparent 1px,
+      transparent 12px
+    );
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.15);
+    opacity: 0.52;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
